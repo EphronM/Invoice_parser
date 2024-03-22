@@ -79,4 +79,4 @@ jobs:
             env:
                 GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
-            run: docker run -p 80:8501 -d -e GOOGLE_API_KEY=${MISTRAL_API_KEY} --name invocie_extractor ${{ secrets.AWS_ECR_REGISTRY_URL }}/${{ secrets.AWS_ECR_REPO }}:latest
+            run: docker run -p 80:8501 -d -e GOOGLE_API_KEY=${GOOGLE_API_KEY} --name invocie_extractor ${{ secrets.AWS_ECR_REGISTRY_URL }}/${{ secrets.AWS_ECR_REPO }}:latest
