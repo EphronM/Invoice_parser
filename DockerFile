@@ -1,5 +1,5 @@
-# Use the official Streamlit image as base
-FROM streamlit/streamlit:latest
+# Use the specified image as the base
+FROM python:3.10-slim-bullseye as release
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -15,4 +15,4 @@ COPY . /app/
 EXPOSE 8501
 
 # Command to run the Streamlit app
-CMD ["streamlit", "run", "your_app_file.py"]
+CMD ["streamlit", "run", "app.py"]
