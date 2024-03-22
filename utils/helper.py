@@ -7,6 +7,17 @@ input_prompt = """
                you will have to answer questions based on the input image
                """
 
+# Define buttons and their corresponding queries
+button_queries = {
+    "Items List": "what are the items mentioned in this invoice? give me the answers in list of points",
+    "Vendor Name": "what is the vendor name?",
+    "Vendor Address": "what is the vendor address",
+    "Item Quantity": "what is the quantity of each item? give me the answers in points",
+    "Unit price": "what are the unit prices ? give me the answer in points",
+    "Sub total": "what is the subtotal amount?",
+    "Total Tax": "what is the total tax amount?",
+}
+
 
 def input_image_setup(uploaded_file):
     # Check if a file has been uploaded
