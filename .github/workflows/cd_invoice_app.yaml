@@ -25,7 +25,10 @@ jobs:
             - name: Login to ECR
               id: login-ecr
               uses: aws-actions/amazon-ecr-login@v2
-
+              
+            - name: dir check
+              run: ls
+              
             - name: Build, tag, and push image to Amazon ECR
               env:
                 ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
